@@ -54,11 +54,11 @@ const SideMenu = () => {
             </a>
           </ul>
         </div>
-        <div className="text-xs flex justify-center items-center gap-1 font-dancing px-5">
+        <div className="text-[0.7rem] flex justify-center items-center gap-1 font-dancing px-5">
           Powered by
           <IoLogoVercel />
-          Vercel <span className="">@</span>
-          <span className="">2024</span>
+          Vercel <span className="text-base pb-1">@</span>
+          <span className="text-[0.5rem]">2024</span>
         </div>
       </div>
     </div>
