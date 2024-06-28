@@ -7,7 +7,7 @@ const Skills = () => {
       <div>
         <div className="flex items-center gap-4">
           <hr className="border-2 border-violet-500 w-16" />
-          <h1 className="font-dancing text-2xl pb-4 font-semibold text-slate-900">
+          <h1 className="font-dancing text-2xl pb-20 font-semibold text-slate-900">
             Core Competencies <span className="text-yellow-600">!</span>
           </h1>
         </div>
