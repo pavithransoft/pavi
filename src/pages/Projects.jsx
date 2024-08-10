@@ -7,13 +7,17 @@ const Projects = () => {
       <h1 className="text-center text-3xl font-mono font-medium text-slate-700 pb-20">
         Projects {`i've`} worked with
       </h1>
-      <ul className="w-3/4 m-auto grid grid-cols-3 gap-10">
+      <ul className="w-3/4 m-auto grid grid-cols-2 gap-10">
         {projects.map((project, index) => (
           <li
             key={index}
             className="hover:scale-105 duration-300 z-0 grid gap-5 place-items-center bg-white p-5 object-cover text-lg rounded font-semibold select-none"
           >
-            <img src={project.image} alt="HTML" className="w-full h-full" />
+            <img
+              src={project.image}
+              alt={project.name}
+              className="w-full h-full object-cover"
+            />
             <div className="flex items-center gap-2 py-5">
               <img src={project.logo} alt="HTML" className="h-8 w-8" />
               <p className="font-semibold text-slate-700">{project.name}</p>
