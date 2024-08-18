@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { assets } from "../assets/assets";
 import { useEffect, useState } from "react";
@@ -7,10 +7,6 @@ const menus = [
   {
     path: "/",
     name: "HOME",
-  },
-  {
-    path: "/about",
-    name: "ABOUT",
   },
   {
     path: "/skills",
@@ -23,10 +19,6 @@ const menus = [
   {
     path: "/blog",
     name: "BLOG",
-  },
-  {
-    path: "/contact",
-    name: "CONTACT",
   },
 ];
 
@@ -41,7 +33,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 transition-all duration-300 z-40 bg-slate-900 text-slate-50 grid grid-cols-3 place-items-center ${
+      className={`fixed top-0 transition-all duration-300 ease-in-out z-40 bg-slate-900 text-slate-50 grid grid-cols-3 place-items-center w-full ${
         scrolled ? "py-1 bg-opacity-60" : "py-3"
       }`}
     >
@@ -59,19 +51,26 @@ const Navbar = () => {
           />
         </div>
       </Link>
-      <ul className="grid grid-cols-6 place-items-center gap-3 text-sm font-light">
+      <div className="flex items-center gap-10 text-sm">
         {menus.map((menu, index) => (
-          <li
+          <NavLink
             key={index}
-            className="p-2 hover:font-bold hover:border-b-2 border-green-500 hover:text-slate-300 hover:duration-300 select-none cursor-pointer"
+            to={menu.path}
+            className={({ isActive }) =>
+              `select-none p-2 duration-300 border-b-2 ${
+                isActive
+                  ? "font-bold text-slate-300 border-green-500"
+                  : "font-light border-transparent hover:border-red-500"
+              }`
+            }
           >
-            <Link to={menu.path}>{menu.name}</Link>
-          </li>
+            {menu.name}
+          </NavLink>
         ))}
-      </ul>
+      </div>
       <div className="grid grid-cols-2 gap-5">
-        <FaLinkedinIn className="h-5 w-5 cursor-pointer" />
-        <FaGithub className="h-5 w-5 cursor-pointer" />
+        <FaLinkedinIn className="h-5 w-5" />
+        <FaGithub className="h-5 w-5" />
       </div>
     </nav>
   );
