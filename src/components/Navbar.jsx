@@ -124,7 +124,7 @@ const Navbar = () => {
         }`}
       >
         <Link to="/">
-          <div>
+          <div className="px-5">
             <img
               src={assets.d}
               alt="Developer"
