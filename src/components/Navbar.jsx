@@ -123,20 +123,23 @@ const Navbar = () => {
           scrolled ? "py-1 2xl:py-3 bg-opacity-60" : "py-3 2xl:py-7"
         }`}
       >
-        <Link to="/">
-          <div className="px-5">
-            <img
-              src={assets.d}
-              alt="Developer"
-              className="h-6 w-6 2xl:w-9 2xl:h-9 cursor-pointer"
-            />
-            <img
-              src={assets.p}
-              alt="Pavithran"
-              className="h-6 w-6 2xl:w-9 2xl:h-9 cursor-pointer"
-            />
-          </div>
-        </Link>
+        {!isSidebarOpen && (
+          <Link to="/">
+            <div className="px-5">
+              <img
+                src={assets.d}
+                alt="Developer"
+                className="h-6 w-6 2xl:w-9 2xl:h-9 cursor-pointer"
+              />
+              <img
+                src={assets.p}
+                alt="Pavithran"
+                className="h-6 w-6 2xl:w-9 2xl:h-9 cursor-pointer"
+              />
+            </div>
+          </Link>
+        )}
+
         <div className="hidden md:flex items-center gap-10 text-sm">
           {menus.map((menu, index) => (
             <NavLink

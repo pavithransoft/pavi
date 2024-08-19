@@ -14,8 +14,8 @@ const Footer = () => {
           </p>
         </div>
         <div className="order-2 font-light text-center">
-          <h2 className="text-xl 2xl:text-4xl font-medium py-3">Follow</h2>
-          <p className="grid grid-cols-2 place-items-center gap-1 text-slate-500">
+          <h2 className="text-xl 2xl:text-4xl font-medium py-1">Follow</h2>
+          <p className="grid grid-cols-2 place-items-center gap-1 text-slate-500 py-1">
             <FaLinkedinIn className="h-5 w-5 2xl:h-9 2xl:w-9 cursor-pointer" />
             <FaGithub className="h-5 w-5 2xl:h-9 2xl:w-9 cursor-pointer" />
           </p>
