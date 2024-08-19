@@ -1,5 +1,85 @@
+// import { Link, NavLink } from "react-router-dom";
+// import { FaLinkedinIn, FaGithub } from "react-icons/fa";
+// import { assets } from "../assets/assets";
+// import { useEffect, useState } from "react";
+
+// const menus = [
+//   {
+//     path: "/",
+//     name: "HOME",
+//   },
+//   {
+//     path: "/skills",
+//     name: "SKILLS",
+//   },
+//   {
+//     path: "/projects",
+//     name: "PROJECTS",
+//   },
+//   {
+//     path: "/blog",
+//     name: "BLOG",
+//   },
+// ];
+
+// const Navbar = () => {
+//   const [scrolled, setScrolled] = useState(false);
+
+//   useEffect(() => {
+//     const handleScroll = () => setScrolled(window.scrollY > 100);
+//     window.addEventListener("scroll", handleScroll);
+//     return () => window.removeEventListener("scroll", handleScroll);
+//   }, []);
+
+//   return (
+//     <nav
+//       className={`fixed top-0 transition-all duration-300 ease-in-out z-40 bg-slate-900 text-slate-50 grid grid-cols-3 place-items-center w-full ${
+//         scrolled ? "py-1 2xl:py-3 bg-opacity-60" : "py-3 2xl:py-7"
+//       }`}
+//     >
+//       <Link to="/">
+//         <div>
+//           <img
+//             src={assets.d}
+//             alt="Developer"
+//             className="h-6 w-6 2xl:w-9 2xl:h-9 cursor-pointer"
+//           />
+//           <img
+//             src={assets.p}
+//             alt="Pavithran"
+//             className="h-6 w-6 2xl:w-9 2xl:h-9 cursor-pointer"
+//           />
+//         </div>
+//       </Link>
+//       <div className="flex items-center gap-10 text-sm">
+//         {menus.map((menu, index) => (
+//           <NavLink
+//             key={index}
+//             to={menu.path}
+//             className={({ isActive }) =>
+//               `select-none p-2 duration-300 border-b-2 2xl:border-b-4 2xl:text-2xl ${
+//                 isActive
+//                   ? "font-bold text-slate-300 border-green-500"
+//                   : "font-light border-transparent hover:border-red-500"
+//               }`
+//             }
+//           >
+//             {menu.name}
+//           </NavLink>
+//         ))}
+//       </div>
+//       <div className="grid grid-cols-2 gap-5">
+//         <FaLinkedinIn className="h-5 w-5 2xl:h-8 2xl:w-8" />
+//         <FaGithub className="h-5 w-5 2xl:h-8 2xl:w-8" />
+//       </div>
+//     </nav>
+//   );
+// };
+
+// export default Navbar;
+
 import { Link, NavLink } from "react-router-dom";
-import { FaLinkedinIn, FaGithub } from "react-icons/fa";
+import { FaLinkedinIn, FaGithub, FaBars } from "react-icons/fa";
 import { assets } from "../assets/assets";
 import { useEffect, useState } from "react";
 
@@ -24,6 +104,7 @@ const menus = [
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 100);
@@ -31,48 +112,116 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
   return (
-    <nav
-      className={`fixed top-0 transition-all duration-300 ease-in-out z-40 bg-slate-900 text-slate-50 grid grid-cols-3 place-items-center w-full ${
-        scrolled ? "py-1 2xl:py-3 bg-opacity-60" : "py-3 2xl:py-7"
-      }`}
-    >
-      <Link to="/">
-        <div>
-          <img
-            src={assets.d}
-            alt="Developer"
-            className="h-6 w-6 2xl:w-9 2xl:h-9 cursor-pointer"
-          />
-          <img
-            src={assets.p}
-            alt="Pavithran"
-            className="h-6 w-6 2xl:w-9 2xl:h-9 cursor-pointer"
-          />
+    <>
+      <nav
+        className={`fixed top-0 transition-all duration-300 ease-in-out z-40 bg-slate-900 text-slate-50 grid grid-cols-2 items-center w-full ${
+          scrolled ? "py-1 2xl:py-3 bg-opacity-60" : "py-3 2xl:py-7"
+        }`}
+      >
+        <Link to="/">
+          <div>
+            <img
+              src={assets.d}
+              alt="Developer"
+              className="h-6 w-6 2xl:w-9 2xl:h-9 cursor-pointer"
+            />
+            <img
+              src={assets.p}
+              alt="Pavithran"
+              className="h-6 w-6 2xl:w-9 2xl:h-9 cursor-pointer"
+            />
+          </div>
+        </Link>
+        <div className="hidden md:flex items-center gap-10 text-sm">
+          {menus.map((menu, index) => (
+            <NavLink
+              key={index}
+              to={menu.path}
+              className={({ isActive }) =>
+                `select-none p-2 duration-300 border-b-2 2xl:border-b-4 2xl:text-2xl ${
+                  isActive
+                    ? "font-bold text-slate-300 border-green-500"
+                    : "font-light border-transparent hover:border-red-500"
+                }`
+              }
+            >
+              {menu.name}
+            </NavLink>
+          ))}
         </div>
-      </Link>
-      <div className="flex items-center gap-10 text-sm">
-        {menus.map((menu, index) => (
-          <NavLink
-            key={index}
-            to={menu.path}
-            className={({ isActive }) =>
-              `select-none p-2 duration-300 border-b-2 2xl:border-b-4 2xl:text-2xl ${
-                isActive
-                  ? "font-bold text-slate-300 border-green-500"
-                  : "font-light border-transparent hover:border-red-500"
-              }`
-            }
+        <div className="hidden md:grid grid-cols-2 gap-5">
+          <FaLinkedinIn className="h-5 w-5 2xl:h-8 2xl:w-8" />
+          <FaGithub className="h-5 w-5 2xl:h-8 2xl:w-8" />
+        </div>
+        <div className="md:hidden flex justify-end w-full px-4">
+          <FaBars className="h-6 w-6 cursor-pointer" onClick={toggleSidebar} />
+        </div>
+      </nav>
+
+      {/* Sidebar */}
+      <div
+        className={`fixed top-0 right-0 h-full w-64 bg-slate-900 text-slate-50 transform ${
+          isSidebarOpen ? "translate-x-0" : "translate-x-full"
+        } transition-transform duration-300 ease-in-out z-50`}
+      >
+        <div className="flex justify-between p-4 border-b border-slate-700">
+          <Link to="/">
+            <div>
+              <img
+                src={assets.d}
+                alt="Developer"
+                className="h-6 w-6 cursor-pointer"
+              />
+              <img
+                src={assets.p}
+                alt="Pavithran"
+                className="h-6 w-6 cursor-pointer"
+              />
+            </div>
+          </Link>
+          <button
+            className="text-2xl focus:outline-none"
+            onClick={toggleSidebar}
           >
-            {menu.name}
-          </NavLink>
-        ))}
+            &times;
+          </button>
+        </div>
+        <div className="flex flex-col gap-6 p-4">
+          {menus.map((menu, index) => (
+            <NavLink
+              key={index}
+              to={menu.path}
+              onClick={toggleSidebar}
+              className={({ isActive }) =>
+                `select-none p-2 duration-300 border-l-4 ${
+                  isActive
+                    ? "font-bold text-slate-300 border-green-500"
+                    : "font-light border-transparent hover:border-red-500"
+                }`
+              }
+            >
+              {menu.name}
+            </NavLink>
+          ))}
+        </div>
+        <div className="flex justify-around p-4 border-t border-slate-700">
+          <FaLinkedinIn className="h-6 w-6 cursor-pointer" />
+          <FaGithub className="h-6 w-6 cursor-pointer" />
+        </div>
       </div>
-      <div className="grid grid-cols-2 gap-5">
-        <FaLinkedinIn className="h-5 w-5 2xl:h-8 2xl:w-8" />
-        <FaGithub className="h-5 w-5 2xl:h-8 2xl:w-8" />
-      </div>
-    </nav>
+      {/* Sidebar Overlay */}
+      {isSidebarOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-40"
+          onClick={toggleSidebar}
+        ></div>
+      )}
+    </>
   );
 };
 
