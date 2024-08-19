@@ -34,7 +34,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 transition-all duration-300 ease-in-out z-40 bg-slate-900 text-slate-50 grid grid-cols-3 place-items-center w-full ${
-        scrolled ? "py-1 bg-opacity-60" : "py-3"
+        scrolled ? "py-1 2xl:py-3 bg-opacity-60" : "py-3 2xl:py-7"
       }`}
     >
       <Link to="/">
@@ -42,12 +42,12 @@ const Navbar = () => {
           <img
             src={assets.d}
             alt="Developer"
-            className="h-6 w-6 cursor-pointer"
+            className="h-6 w-6 2xl:w-9 2xl:h-9 cursor-pointer"
           />
           <img
             src={assets.p}
             alt="Pavithran"
-            className="h-6 w-6 cursor-pointer"
+            className="h-6 w-6 2xl:w-9 2xl:h-9 cursor-pointer"
           />
         </div>
       </Link>
@@ -57,7 +57,7 @@ const Navbar = () => {
             key={index}
             to={menu.path}
             className={({ isActive }) =>
-              `select-none p-2 duration-300 border-b-2 ${
+              `select-none p-2 duration-300 border-b-2 2xl:border-b-4 2xl:text-2xl ${
                 isActive
                   ? "font-bold text-slate-300 border-green-500"
                   : "font-light border-transparent hover:border-red-500"
@@ -69,8 +69,8 @@ const Navbar = () => {
         ))}
       </div>
       <div className="grid grid-cols-2 gap-5">
-        <FaLinkedinIn className="h-5 w-5" />
-        <FaGithub className="h-5 w-5" />
+        <FaLinkedinIn className="h-5 w-5 2xl:h-8 2xl:w-8" />
+        <FaGithub className="h-5 w-5 2xl:h-8 2xl:w-8" />
       </div>
     </nav>
   );
