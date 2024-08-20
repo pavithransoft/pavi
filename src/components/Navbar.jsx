@@ -40,6 +40,7 @@ const Navbar = () => {
 
   return (
     <>
+      {/* Navbar */}
       {!isSidebarOpen && (
         <nav
           className={`fixed top-0 transition-all duration-300 ease-in-out z-40 bg-slate-900 text-slate-50 grid grid-cols-2 items-center w-full ${
