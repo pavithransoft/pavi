@@ -78,7 +78,7 @@ const Footer = () => {
         </div>
       </section>
       <hr className="border border-slate-600 w-full" />
-      <p className="flex flex-col sm:flex-row items-center justify-center gap-1 font-thin text-xs sm:text-sm 2xl:text-2xl p-5 2xl:p-14 text-center">
+      <p className="flex items-center justify-center gap-1 font-thin text-xs sm:text-sm 2xl:text-2xl p-5 2xl:p-14 text-center">
         Made in dp &copy; 2024 . powered by
         <span>
           <FaReact className="fill-cyan-600" />
