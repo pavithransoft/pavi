@@ -59,7 +59,7 @@ const Home = () => {
                 alt={service.title}
                 className="h-10 w-10 sm:h-16 sm:w-16"
               />
-              <p className="font-medium text-slate-700 text-xs text-center">
+              <p className="font-medium text-slate-700 text-sm text-center">
                 {service.title}
               </p>
             </div>
