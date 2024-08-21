@@ -31,7 +31,7 @@ const Home = () => {
         </div>
       </div>
       <div className="bg-slate-950 py-8">
-        <h2 className="text-2xl text-slate-50 text-center pb-8 border-b">
+        <h2 className="text-2xl text-slate-50 text-center pb-8 border-b border-slate-700">
           About me
         </h2>
         <p className="px-3 pt-8 sm:px-48 text-center text-slate-400 font-mono leading-loose">
