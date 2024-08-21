@@ -28,6 +28,6 @@ export const services = [
   },
   {
     icon: enterpriseappdevelopment,
-    title: "Enterprise App Development",
+    title: "Enterprise Apps",
   },
 ];
