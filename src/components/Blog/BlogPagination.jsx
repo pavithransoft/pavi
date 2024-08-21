@@ -14,7 +14,7 @@ const BlogPagination = ({
       <div className="flex items-center justify-center gap-3 select-none py-12">
         {currentPage > 1 && (
           <IoIosArrowBack
-            className="w-8 h-8 sm:w-9 sm:h-9 p-1 hover:bg-slate-200 rounded cursor-pointer"
+            className="w-8 h-8 lg:w-9 lg:h-9 p-1 hover:bg-slate-200 rounded cursor-pointer"
             onClick={() => setCurrentPage(currentPage - 1)}
           />
         )}
@@ -34,7 +34,7 @@ const BlogPagination = ({
         ))}
         {currentPage < totalPages && (
           <IoIosArrowForward
-            className="w-8 h-8 sm:w-9 sm:h-9 p-1 hover:bg-slate-200 rounded cursor-pointer"
+            className="w-8 h-8 lg:w-9 lg:h-9 p-1 hover:bg-slate-200 rounded cursor-pointer"
             onClick={() => setCurrentPage(currentPage + 1)}
           />
         )}
