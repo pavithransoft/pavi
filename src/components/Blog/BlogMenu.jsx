@@ -1,6 +1,6 @@
 const BlogMenu = ({ blog_menu, selectedCategory, setSelectedCategory }) => {
   return (
-    <ul className="flex items-center justify-center gap-10 font-light text-slate-900 pb-7 border-b border-slate-300">
+    <ul className="flex items-center justify-center gap-1 sm:gap-10 font-light text-slate-900 pb-7 border-b border-slate-300 text-sm sm:text-base">
       {blog_menu.map((menu, index) => (
         <li
           key={index}

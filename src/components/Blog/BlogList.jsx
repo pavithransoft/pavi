@@ -1,6 +1,6 @@
 const BlogList = ({ paginatedBlogs, hoveredIndex, setHoveredIndex }) => {
   return (
-    <div className="w-3/4 m-auto grid grid-cols-3 gap-10 py-10">
+    <div className="w-5/6 sm:w-3/4 m-auto grid sm:grid-cols-2 xl:grid-cols-3 gap-10 py-10">
       {paginatedBlogs.map((list, index) => (
         <div
           key={index}

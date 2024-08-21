@@ -11,13 +11,7 @@ import blog_10 from "./blog_10.png";
 import blog_11 from "./blog_11.png";
 import blog_12 from "./blog_12.png";
 
-export const blog_menu = [
-  "All",
-  "Web Design",
-  "Frontend",
-  "Backend",
-  "Fullstack",
-];
+export const blog_menu = ["All", "Components", "Templates", "Applications"];
 
 export const blog_list = [
   {
@@ -25,83 +19,83 @@ export const blog_list = [
     tag: 1,
     title: "Button",
     description: "Create different type of buttons.",
-    category: "Web Design",
+    category: "Components",
   },
   {
     image: blog_2,
     tag: 2,
     title: "Form",
     description: "Create different type of forms.",
-    category: "Frontend",
+    category: "Templates",
   },
   {
     image: blog_3,
     tag: 3,
     title: "Table",
     description: "Create different type of tables.",
-    category: "Backend",
+    category: "Applications",
   },
   {
     image: blog_4,
     tag: 4,
     title: "Navbar",
     description: "Create different type of navbar's.",
-    category: "Fullstack",
+    category: "Applications",
   },
   {
     image: blog_5,
     tag: 5,
     title: "Sidebar",
     description: "Create different type of sidebar's.",
-    category: "Web Design",
+    category: "Components",
   },
   {
     image: blog_6,
     tag: 6,
     title: "Card",
     description: "Create different type of cards.",
-    category: "Frontend",
+    category: "Templates",
   },
   {
     image: blog_7,
     tag: 7,
     title: "Layout",
     description: "Create different type of layouts.",
-    category: "Backend",
+    category: "Applications",
   },
   {
     image: blog_8,
     tag: 8,
     title: "Validation",
     description: "Create different type of validations.",
-    category: "Fullstack",
+    category: "Templates",
   },
   {
     image: blog_9,
     tag: 9,
     title: "Popup",
     description: "Create different type of popups.",
-    category: "Web Design",
+    category: "Components",
   },
   {
     image: blog_10,
     tag: 10,
     title: "Pagination",
     description: "Create different type of pagination's.",
-    category: "Frontend",
+    category: "Templates",
   },
   {
     image: blog_11,
     tag: 11,
     title: "Menu",
     description: "Create different type of menus.",
-    category: "Backend",
+    category: "Applications",
   },
   {
     image: blog_12,
     tag: 12,
     title: "Routing",
     description: "Create different type of routings.",
-    category: "Fullstack",
+    category: "Components",
   },
 ];
