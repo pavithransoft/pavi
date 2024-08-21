@@ -48,7 +48,7 @@ const Home = () => {
         <h2 className="text-center text-xl sm:text-2xl font-mono text-slate-950 py-16">
           My Services
         </h2>
-        <div className="grid sm:grid-cols-3 place-items-center gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 place-items-center gap-8">
           {services.map((service, index) => (
             <div
               key={index}
@@ -59,7 +59,7 @@ const Home = () => {
                 alt={service.title}
                 className="h-10 w-10 sm:h-16 sm:w-16"
               />
-              <p className="font-medium text-slate-700 text-sm">
+              <p className="font-medium text-slate-700 text-xs text-center">
                 {service.title}
               </p>
             </div>
