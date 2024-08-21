@@ -44,7 +44,7 @@ const Home = () => {
           collaborator.
         </p>
       </div>
-      <div className="w-4/5 m-auto">
+      <div className="w-5/6 m-auto">
         <h2 className="text-center text-xl sm:text-2xl font-mono text-slate-950 py-16">
           My Services
         </h2>
