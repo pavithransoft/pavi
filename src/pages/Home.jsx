@@ -44,11 +44,11 @@ const Home = () => {
           collaborator.
         </p>
       </div>
-      <div className="w-3/4 m-auto">
+      <div className="w-4/5 m-auto">
         <h2 className="text-center text-xl sm:text-2xl font-mono text-slate-950 py-16">
           My Services
         </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 place-items-center gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 place-items-center gap-6">
           {services.map((service, index) => (
             <div
               key={index}
