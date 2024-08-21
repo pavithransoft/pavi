@@ -14,4 +14,24 @@ export const projects = [
     logo: shoplogo,
     name: "Eazzy Buy",
   },
+  {
+    image: foodapp,
+    logo: foodlogo,
+    name: "Tasty Foods",
+  },
+  {
+    image: foodapp,
+    logo: foodlogo,
+    name: "Tasty Foods",
+  },
+  {
+    image: shopapp,
+    logo: shoplogo,
+    name: "Eazzy Buy",
+  },
+  {
+    image: shopapp,
+    logo: shoplogo,
+    name: "Eazzy Buy",
+  },
 ];

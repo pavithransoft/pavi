@@ -7,7 +7,7 @@ const Projects = () => {
       <h1 className="text-center text-xl md:text-2xl lg:text-[1.6rem] font-mono font-medium text-slate-700 pb-20">
         Projects {`i've`} worked with
       </h1>
-      <ul className="w-5/6 m-auto grid sm:grid-cols-2 gap-10">
+      <ul className="w-5/6 m-auto grid sm:grid-cols-2 xl:grid-cols-3 gap-10">
         {projects.map((project, index) => (
           <li
             key={index}
