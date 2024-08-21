@@ -4,10 +4,10 @@ import { FaArrowRight } from "react-icons/fa6";
 const Projects = () => {
   return (
     <section className="bg-slate-100 pt-36 pb-24">
-      <h1 className="text-center text-3xl font-mono font-medium text-slate-700 pb-20">
+      <h1 className="text-center text-xl md:text-2xl lg:text-[1.6rem] font-mono font-medium text-slate-700 pb-20">
         Projects {`i've`} worked with
       </h1>
-      <ul className="w-3/4 m-auto grid grid-cols-2 gap-10">
+      <ul className="w-5/6 m-auto grid sm:grid-cols-2 gap-10">
         {projects.map((project, index) => (
           <li
             key={index}
