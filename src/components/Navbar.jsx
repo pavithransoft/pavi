@@ -44,25 +44,25 @@ const Navbar = () => {
       {!isSidebarOpen && (
         <nav
           className={`fixed top-0 transition-all duration-300 ease-in-out z-40 bg-slate-900 text-slate-50 grid grid-cols-2 lg:grid-cols-3 items-center w-full ${
-            scrolled ? "py-1 bg-opacity-60" : "py-3"
+            scrolled ? "py-1 2xl:py-2 bg-opacity-60" : "py-3 2xl:py-5"
           }`}
         >
           <Link to="/">
-            <div className="px-5">
+            <div className="px-5 2xl:px-10">
               <img
                 src={assets.d}
                 alt="Developer"
-                className="h-6 w-6 cursor-pointer"
+                className="h-6 w-6 2xl:h-12 2xl:w-12 cursor-pointer"
               />
               <img
                 src={assets.p}
                 alt="Pavithran"
-                className="h-6 w-6 cursor-pointer"
+                className="h-6 w-6 2xl:h-12 2xl:w-12 cursor-pointer"
               />
             </div>
           </Link>
 
-          <div className="hidden md:flex items-center justify-center gap-10 text-sm">
+          <div className="hidden md:flex items-center justify-center gap-10 text-sm 2xl:text-2xl">
             {menus.map((menu, index) => (
               <NavLink
                 key={index}
@@ -79,9 +79,9 @@ const Navbar = () => {
               </NavLink>
             ))}
           </div>
-          <div className="hidden lg:flex justify-end items-center px-5 gap-3 xl:gap-4">
-            <FaLinkedinIn className="h-5 w-5" />
-            <FaGithub className="h-5 w-5" />
+          <div className="hidden lg:flex justify-end items-center px-5 2xl:px-10 gap-3 xl:gap-4 2xl:gap-8">
+            <FaLinkedinIn className="h-5 w-5 2xl:h-10 2xl:w-10" />
+            <FaGithub className="h-5 w-5 2xl:h-10 2xl:w-10" />
           </div>
           <div className="md:hidden flex justify-end w-full px-4">
             <FaBars
