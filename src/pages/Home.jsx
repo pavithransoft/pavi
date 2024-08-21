@@ -23,7 +23,7 @@ const Home = () => {
           <h2 className="text-center text-2xl xl:text-3xl 2xl:text-6xl font-mono py-5 text-slate-950">
             Who am I?
           </h2>
-          <p className="text-center text-xl xl:text-2xl 2xl:text-5xl text-slate-600 leading-relaxed sm:font-dancing xl:leading-loose 2xl:leading-[5rem]">
+          <p className="text-center text-xl xl:text-2xl 2xl:text-5xl text-slate-600 leading-relaxed xl:leading-loose 2xl:leading-[5rem]">
             I am a creative thinker, designer, and developer who enriches brands
             and delivers comprehensive technology services that meet the full
             spectrum of business needs.
@@ -31,7 +31,7 @@ const Home = () => {
         </div>
       </div>
       <div className="bg-slate-950 py-8 2xl:py-20">
-        <h2 className="text-2xl 2xl:text-5xl text-slate-50 text-center pb-3 2xl:pb-10 border-b border-slate-800 sm:font-dancing">
+        <h2 className="text-2xl 2xl:text-5xl text-slate-50 text-center pb-3 2xl:pb-10 border-b border-slate-800">
           About me
         </h2>
         <p className="px-3 pt-8 sm:px-5 xl:px-20 text-center text-slate-400 font-mono leading-loose xl:text-xl 2xl:text-4xl 2xl:leading-[3.5rem]">
