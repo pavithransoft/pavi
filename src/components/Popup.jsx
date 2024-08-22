@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { popup } from "../assets/popup/popup";
 import { IoIosAdd, IoIosClose } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const Popup = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,7 +25,7 @@ const Popup = () => {
         )}
       </div>
 
-      <ul
+      <div
         className={`fixed bottom-24 right-5 grid gap-3 xl:gap-4 transform transition-all duration-500 ease-in-out ${
           isOpen
             ? "opacity-100 translate-y-0"
@@ -32,15 +33,15 @@ const Popup = () => {
         }`}
       >
         {popup.map((item, index) => (
-          <li key={index}>
+          <Link to={item.link} key={index} target="_blank">
             <img
               src={item.icon}
               alt={item.name}
               className="w-7 h-7 xl:w-8 xl:h-8 hover:scale-125 duration-500"
             />
-          </li>
+          </Link>
         ))}
-      </ul>
+      </div>
     </>
   );
 };

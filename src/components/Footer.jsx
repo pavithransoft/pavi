@@ -1,4 +1,5 @@
 import { FaLinkedinIn, FaGithub, FaReact } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -19,8 +20,15 @@ const Footer = () => {
             Follow
           </h2>
           <div className="flex justify-center gap-4 2xl:gap-6 py-2 text-slate-500">
-            <FaLinkedinIn className="h-5 w-5 cursor-pointer" />
-            <FaGithub className="h-5 w-5 cursor-pointer" />
+            <Link
+              to="https://www.linkedin.com/in/pavithran-gopalakrishnan"
+              target="_blank"
+            >
+              <FaLinkedinIn className="h-5 w-5" />
+            </Link>
+            <Link to="https://github.com/pavithransoft" target="_blank">
+              <FaGithub className="h-5 w-5" />
+            </Link>
           </div>
         </div>
         <div className="text-center order-1 sm:order-3">
@@ -28,8 +36,11 @@ const Footer = () => {
             Contact
           </h2>
           <p className="py-1 text-sm xl:text-base leading-relaxed text-slate-300">
-            pavithran.soft@gmail.com <br />
-            +91 8012322922
+            <Link to="mailto:pavithran.soft@gmail.com">
+              pavithran.soft@gmail.com
+            </Link>
+            <br />
+            <Link to="tel:+918012322922">+91 8012322922</Link>
           </p>
         </div>
       </section>

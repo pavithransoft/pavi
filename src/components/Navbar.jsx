@@ -49,16 +49,8 @@ const Navbar = () => {
         >
           <Link to="/">
             <div className="px-5 2xl:px-10">
-              <img
-                src={assets.d}
-                alt="Developer"
-                className="h-6 w-6 cursor-pointer"
-              />
-              <img
-                src={assets.p}
-                alt="Pavithran"
-                className="h-6 w-6 cursor-pointer"
-              />
+              <img src={assets.d} alt="Developer" className="h-6 w-6" />
+              <img src={assets.p} alt="Pavithran" className="h-6 w-6" />
             </div>
           </Link>
 
@@ -80,8 +72,15 @@ const Navbar = () => {
             ))}
           </div>
           <div className="hidden lg:flex justify-end items-center px-5 2xl:px-10 gap-3 xl:gap-4 2xl:gap-8">
-            <FaLinkedinIn className="h-5 w-5" />
-            <FaGithub className="h-5 w-5" />
+            <Link
+              to="https://www.linkedin.com/in/pavithran-gopalakrishnan"
+              target="_blank"
+            >
+              <FaLinkedinIn className="h-5 w-5" />
+            </Link>
+            <Link to="https://github.com/pavithransoft" target="_blank">
+              <FaGithub className="h-5 w-5" />
+            </Link>
           </div>
           <div className="md:hidden flex justify-end w-full px-4">
             <FaBars
