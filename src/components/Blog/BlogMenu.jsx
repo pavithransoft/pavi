@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const BlogMenu = ({ blog_menu, selectedCategory, setSelectedCategory }) => {
   return (
     <ul className="flex items-center justify-center gap-1 sm:gap-10 font-light text-slate-900 pb-7 border-b border-slate-300 text-sm sm:text-base">
@@ -14,6 +16,13 @@ const BlogMenu = ({ blog_menu, selectedCategory, setSelectedCategory }) => {
       ))}
     </ul>
   );
+};
+
+// Prop validation using PropTypes
+BlogMenu.propTypes = {
+  blog_menu: PropTypes.arrayOf(PropTypes.string).isRequired, // Array of strings is required
+  selectedCategory: PropTypes.string.isRequired, // Selected category should be a string and is required
+  setSelectedCategory: PropTypes.func.isRequired, // Function to set the selected category is required
 };
 
 export default BlogMenu;

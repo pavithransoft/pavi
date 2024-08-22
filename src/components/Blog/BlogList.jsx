@@ -1,5 +1,6 @@
 import { FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const BlogList = ({ paginatedBlogs, hoveredIndex, setHoveredIndex }) => {
   return (
@@ -32,6 +33,20 @@ const BlogList = ({ paginatedBlogs, hoveredIndex, setHoveredIndex }) => {
       ))}
     </div>
   );
+};
+
+// Prop validation using PropTypes
+BlogList.propTypes = {
+  paginatedBlogs: PropTypes.arrayOf(
+    PropTypes.shape({
+      image: PropTypes.string.isRequired, // Blog image URL
+      title: PropTypes.string.isRequired, // Blog title
+      description: PropTypes.string.isRequired, // Blog description
+      link: PropTypes.string.isRequired, // Link to the full blog
+    })
+  ).isRequired, // paginatedBlogs is required
+  hoveredIndex: PropTypes.number, // hoveredIndex is optional (can be null)
+  setHoveredIndex: PropTypes.func.isRequired, // Function to set the hovered index
 };
 
 export default BlogList;

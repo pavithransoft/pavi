@@ -1,4 +1,5 @@
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import PropTypes from "prop-types";
 
 const BlogPagination = ({
   currentPage,
@@ -41,6 +42,14 @@ const BlogPagination = ({
       </div>
     </section>
   );
+};
+
+// Prop validation using PropTypes
+BlogPagination.propTypes = {
+  currentPage: PropTypes.number.isRequired, // Current page number
+  setCurrentPage: PropTypes.func.isRequired, // Function to set the current page
+  totalPages: PropTypes.number.isRequired, // Total number of pages
+  getPageNumbers: PropTypes.func.isRequired, // Function to get an array of page numbers
 };
 
 export default BlogPagination;
