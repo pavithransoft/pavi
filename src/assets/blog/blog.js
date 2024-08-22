@@ -1,3 +1,4 @@
+import clipboard from "./clipboard.png";
 import blog_1 from "./blog_1.png";
 import blog_2 from "./blog_2.png";
 import blog_3 from "./blog_3.png";
@@ -14,6 +15,14 @@ import blog_12 from "./blog_12.png";
 export const blog_menu = ["All", "Components", "Templates", "Applications"];
 
 export const blog_list = [
+  {
+    image: clipboard,
+    title: "Code Snippet Clipboard",
+    description:
+      "Develop a code snippet clipboard component using React and Tailwind CSS for efficient and visually appealing text copying functionality.",
+    link: "https://github.com/pavithransoft/components/tree/main/clipboard",
+    category: "Components",
+  },
   {
     image: blog_1,
     tag: 1,
