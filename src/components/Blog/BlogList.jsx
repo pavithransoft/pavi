@@ -26,7 +26,7 @@ const BlogList = ({ paginatedBlogs, hoveredIndex, setHoveredIndex }) => {
                   View More <FaGithub className="h-5 w-5" />
                 </Link>
               </span>
-              <div className="absolute inset-0 bg-opacity-40 bg-red-500 z-0 rounded-md"></div>
+              <div className="absolute inset-0 bg-opacity-40 bg-slate-500 z-0 rounded-md"></div>
             </div>
           )}
         </div>

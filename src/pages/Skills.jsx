@@ -2,7 +2,7 @@ import { skills } from "../assets/skills/skills";
 
 const Skills = () => {
   return (
-    <section className="bg-slate-100 pt-44 pb-24">
+    <section className="bg-slate-100 pt-36 pb-24">
       <h1 className="text-center text-xl md:text-2xl lg:text-[1.6rem] font-mono font-medium text-slate-700 pb-20">
         Skills &amp; Techniques
       </h1>
