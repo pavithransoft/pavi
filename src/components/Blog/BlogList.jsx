@@ -23,7 +23,7 @@ const BlogList = ({ paginatedBlogs, hoveredIndex, setHoveredIndex }) => {
                   target="_blank"
                   className="flex items-center gap-5"
                 >
-                  View More <FaGithub className="h-5 w-5" />
+                  Source Code <FaGithub className="h-5 w-5" />
                 </Link>
               </span>
               <div className="absolute inset-0 bg-opacity-40 bg-slate-500 z-0 rounded-md"></div>
