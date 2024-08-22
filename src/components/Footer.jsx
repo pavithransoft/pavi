@@ -9,11 +9,13 @@ const Footer = () => {
           <h2 className="text-lg xl:text-xl font-medium py-1 xl:py-2">
             Location
           </h2>
-          <p className="py-1 text-sm xl:text-base text-slate-300 leading-relaxed">
-            Plot No. 4, Saravana Nagar, <br />
-            Sholinganallur, Chennai, Tamil Nadu, <br />
-            India - 600119
-          </p>
+          <Link to="https://maps.app.goo.gl/JCNdpeceD83nsZDZ7" target="_blank">
+            <p className="py-1 text-sm xl:text-base text-slate-300 leading-relaxed">
+              Plot No. 4, Saravana Nagar, <br />
+              Sholinganallur, Chennai, Tamil Nadu, <br />
+              India - 600119
+            </p>
+          </Link>
         </div>
         <div className="text-center order-2">
           <h2 className="text-lg xl:text-xl font-medium py-1 xl:py-4">
