@@ -37,7 +37,7 @@ const Popup = () => {
             <img
               src={item.icon}
               alt={item.name}
-              className="w-7 h-7 xl:w-8 xl:h-8 hover:scale-125 duration-500"
+              className="w-7 h-7 hover:scale-125 duration-500"
             />
           </Link>
         ))}
