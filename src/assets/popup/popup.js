@@ -19,7 +19,7 @@ export const popup = [
   {
     icon: whatsapp,
     name: "WhatsApp",
-    link: `https://wa.me/${8012322922}?text=${encodeURIComponent(
+    link: `https://wa.me/${918012322922}?text=${encodeURIComponent(
       "Hello, I’m keen to learn more about your services."
     )}`,
   },
