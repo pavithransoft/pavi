@@ -5,9 +5,9 @@ import { useEffect, useState } from "react";
 
 const menus = [
   { path: "/", name: "HOME" },
-  { path: "skills", name: "SKILLS" },
-  { path: "projects", name: "PROJECTS" },
-  { path: "blog", name: "BLOG" },
+  { path: "/skills", name: "SKILLS" },
+  { path: "/projects", name: "PROJECTS" },
+  { path: "/blog", name: "BLOG" },
 ];
 
 const Navbar = () => {
